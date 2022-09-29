@@ -1,7 +1,7 @@
+#! /usr/bin/env node
 import connectDB from './src/connectDB.js';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import {program} from 'commander';
 
 console.log(chalk.black.bgWhite(' Welcome to Schema Converter/Mapper \n'));
 
@@ -26,5 +26,3 @@ await inquirer.prompt([
             return connectDB();
         }
     });
-
-program.parse(process.args);

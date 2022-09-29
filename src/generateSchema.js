@@ -21,10 +21,16 @@ export default async function generateSchemaType(tableName, data, type, useOptio
 
     const execute = async () => {
         try {
-            fs.writeFileSync(`${tableName}${getExtByType(type)}`, template);
+            let dir = './output';
+            if (!fs.existsSync(dir)){
+                fs.mkdirSync(dir);
+            }
+            fs.writeFileSync(`./output/${tableName}${getExtByType(type)}`, template);
             console.log(chalk.bgBlack.green('File write successful on ROOT '));
+            console.log(chalk.bgWhite.blue(`file on -> ${process.cwd()}\\output\\${tableName}${getExtByType(type)}`));
+            console.log(chalk.bgWhite.blue(`file dir on -> ${process.cwd()}\\output`));
         } catch (err) {
-            console.log(chalk.bgBlack.red('Error on make File'));
+            console.log(chalk.bgBlack.red('Error on make File '));
         }
     };
 

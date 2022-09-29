@@ -1,20 +1,16 @@
 {
   "name": "schemaconverter",
-  "version": "2.0.1",
-  "type": "module",
+  "version": "2.0.6",
   "description": "",
   "main": "./index.js",
   "bin": "./index.js",
-  "pkg": {
-    "options": [
-      "experimental-modules"
-    ]
-  },
+  "type": "module",
   "scripts": {
-    "start": "node .",
-    "schemaconverter": "node ."
+    "task": "node ."
   },
-  "keywords": [],
+  "keywords": [
+    "schemaconverter"
+  ],
   "author": "yangoff",
   "license": "MIT",
   "dependencies": {
