@@ -1,10 +1,10 @@
 {
   "name": "schemaconverter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "description": "",
-  "main": "main.js",
-  "bin": "main.js",
+  "main": "./main.js",
+  "bin": "./main.js",
   "pkg": {
     "options": [
       "experimental-modules"
@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pkg . --target host --out-path dist/ShemaConverter.exe --debug",
-    "start": "node ./main.js"
+    "start": "node ./main.js",
+    "schemaconverter": "node ."
   },
   "keywords": [],
   "author": "yangoff",
