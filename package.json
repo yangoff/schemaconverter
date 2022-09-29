@@ -9,7 +9,15 @@
     "task": "node ."
   },
   "keywords": [
-    "schemaconverter"
+    "schemaconverter",
+    "schema",
+    "schema converter",
+    "converter",
+    "mysql",
+    "sql",
+    "javascript",
+    "typescript",
+    "dart"
   ],
   "author": "yangoff",
   "license": "MIT",
