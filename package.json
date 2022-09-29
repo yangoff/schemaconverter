@@ -16,8 +16,8 @@
     "start": "node ./main.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "yangoff",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^9.4.0",
@@ -28,5 +28,13 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/node": "^7.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangoff/schemaconverter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yangoff/schemaconverter/issues"
+  },
+  "homepage": "https://github.com/yangoff/schemaconverter#readme"
 }
