@@ -1,0 +1,32 @@
+{
+  "name": "schemaconverter",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "main.js",
+  "bin": "main.js",
+  "pkg": {
+    "options": [
+      "experimental-modules"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg . --target host --out-path dist/ShemaConverter.exe --debug",
+    "start": "node ./main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.4.0",
+    "inquirer": "^9.1.2",
+    "mysql": "^2.18.1",
+    "python": "^0.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/node": "^7.19.1"
+  }
+}
