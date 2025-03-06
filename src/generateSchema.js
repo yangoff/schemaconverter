@@ -66,12 +66,13 @@ function getLineDart(field, type, optional, defaultValue) {
 //Types
 function identifyFieldType(field, type) {
     let t = field.toString();
-    let stringConditions = ['varchar', 'text', 'json'];
+    let stringConditions = ['text', 'json','char'];
     let booleanConditions = ['tinyint'];
     let dateConditions = ['date'];
     let dateTimeConditions = ['datetime'];
     let integerConditions = ['int'];
     let doubleConditions = ['decimal', 'double', 'float'];
+    let blolConditions = ['blob'];
 
     switch (true) {
         case stringConditions.reduce((a, c) => a + t.includes(c), 0) === 1:
@@ -86,6 +87,8 @@ function identifyFieldType(field, type) {
             return getInteger(type);
         case doubleConditions.reduce((a, c) => a + t.includes(c), 0) === 1:
             return getDouble(type);
+        case blolConditions.reduce((a, c) => a + t.includes(c), 0) === 1:
+            return getBlob(type);
     }
 }
 
@@ -155,6 +158,16 @@ function getDateTime(type) {
     }
 }
 
+function getBlob(type) {
+    switch (type) {
+        case 'Javascript':
+            return 'PropTypes.arrayOf(PropTypes.number)';
+        case 'Typescript':
+            return 'number[]';
+        case 'Dart':
+            return 'List<int>';
+    }
+}
 
 //Template
 function templatizeJS(name, fields) {
